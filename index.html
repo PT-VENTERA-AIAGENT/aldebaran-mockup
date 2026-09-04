@@ -233,7 +233,9 @@ tbody tr:hover{background:#FAFAF9}
     </div>
 
     <!-- LIVE BLOOD STOCK CARD -->
-    <div style="background:white;border-radius:24px;padding:32px;box-shadow:var(--shadow-lg);border:1px solid var(--hairline);position:relative">
+    <div style="position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg)">
+      <img src="img/img-01.webp" alt="Relawan PMI Klaten memeriksa lengan pendonor darah" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.15;z-index:0">
+    <div style="background:rgba(255,255,255,.94);border-radius:24px;padding:32px;border:1px solid var(--hairline);position:relative;z-index:1">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px">
         <div>
           <div class="eyebrow" style="color:var(--accent)">STOK DARAH REALTIME</div>
@@ -292,6 +294,7 @@ tbody tr:hover{background:#FAFAF9}
           <div style="font-size:12px;color:var(--tx-muted);line-height:1.5">Dibutuhkan donor rhesus negatif segera. <a href="#" onclick="show('s2');return false" style="color:var(--accent-dark);font-weight:600;text-decoration:underline">Daftar sekarang &rarr;</a></div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -544,9 +547,11 @@ tbody tr:hover{background:#FAFAF9}
 
     <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px">
       <div class="card news-card" style="padding:0;overflow:hidden">
-        <div style="height:280px;background:linear-gradient(135deg,#DC2626 0%,#991B1B 100%);position:relative;display:flex;align-items:end;padding:32px">
+        <div style="height:280px;position:relative;display:flex;align-items:end;padding:32px;overflow:hidden">
+          <img src="img/img-02.webp" alt="Tim PMI menurunkan bantuan darurat di desa terdampak banjir" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(15,23,42,.88) 100%)"></div>
           <div style="position:absolute;top:24px;left:24px"><span class="badge" style="background:rgba(255,255,255,.2);color:white;backdrop-filter:blur(8px)">UNGGULAN</span></div>
-          <div style="color:white">
+          <div style="color:white;position:relative">
             <div style="font-size:11px;opacity:.8;letter-spacing:.08em;margin-bottom:8px">BERITA UTAMA &middot; 3 SEP 2026</div>
             <h3 style="font-size:26px;color:white;line-height:1.2">PMI Klaten Kirim 12 Tim Relawan Bantu Korban Banjir Bandang di Wonogiri</h3>
           </div>
@@ -561,9 +566,7 @@ tbody tr:hover{background:#FAFAF9}
       </div>
 
       <div class="card news-card" style="padding:0;overflow:hidden">
-        <div style="height:160px;background:linear-gradient(135deg,#FEF3C7,#FCD34D);display:flex;align-items:center;justify-content:center">
-          <svg width="60" height="60" fill="none" stroke="#B45309" stroke-width="1.5" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
-        </div>
+        <img src="img/img-03.webp" alt="Fasilitator PMI mengajar kesiapsiagaan Merapi kepada pelajar" style="width:100%;height:160px;display:block;object-fit:cover">
         <div style="padding:20px">
           <span class="badge badge-amber" style="margin-bottom:10px">KESIAPSIAGAAN</span>
           <h4 style="font-size:16px;margin-top:8px;margin-bottom:8px;line-height:1.3">Sosialisasi Peta Risiko Merapi ke 24 Sekolah Zona Bahaya</h4>
@@ -572,9 +575,7 @@ tbody tr:hover{background:#FAFAF9}
       </div>
 
       <div class="card news-card" style="padding:0;overflow:hidden">
-        <div style="height:160px;background:linear-gradient(135deg,#DCFCE7,#86EFAC);display:flex;align-items:center;justify-content:center">
-          <svg width="60" height="60" fill="none" stroke="#15803D" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
+        <img src="img/img-04.webp" alt="Pelajar PMR berlatih pertolongan pertama di lapangan sekolah" style="width:100%;height:160px;display:block;object-fit:cover">
         <div style="padding:20px">
           <span class="badge badge-green" style="margin-bottom:10px">PELATIHAN</span>
           <h4 style="font-size:16px;margin-top:8px;margin-bottom:8px;line-height:1.3">Ujian PMR Mula Angkatan 2026/2027 Ditutup 20 Sep</h4>
@@ -762,8 +763,9 @@ tbody tr:hover{background:#FAFAF9}
 <!-- ========================================== -->
 <div id="s2" class="scr">
 
-<section style="padding:60px 40px 40px;background:linear-gradient(180deg,#FEF7F7 0%,white 100%)">
-  <div style="max-width:1200px;margin:0 auto">
+<section style="padding:60px 40px 40px;background:linear-gradient(180deg,#FEF7F7 0%,white 100%);position:relative;overflow:hidden">
+  <img src="img/img-05.webp" alt="Kegiatan donor darah massal di aula sekolah Klaten" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.25;z-index:0">
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:1">
     <div style="display:flex;gap:8px;font-size:12px;color:var(--tx-soft);margin-bottom:16px">
       <a href="#" onclick="show('s1');return false" style="color:var(--tx-muted)">Beranda</a>
       <span>&rsaquo;</span>
@@ -976,7 +978,8 @@ tbody tr:hover{background:#FAFAF9}
           <div><div class="stat-num" style="color:#0284C7">08&ndash;20</div><div style="font-size:12px;color:var(--tx-soft);font-weight:600;margin-top:4px">JAM OPERASIONAL</div></div>
         </div>
       </div>
-      <div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <img src="img/img-06.webp" alt="Dokter Klinik Pratama PMI memeriksa anak bersama ibunya" style="width:100%;height:300px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow-lg)">
         <div style="background:white;border:1px solid var(--hairline);border-radius:20px;padding:24px;box-shadow:var(--shadow-lg)">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
             <div>
@@ -1020,12 +1023,12 @@ tbody tr:hover{background:#FAFAF9}
   <div style="max-width:1200px;margin:0 auto">
     <h2 style="font-size:32px;margin-bottom:32px">Tim dokter &amp; tenaga kesehatan</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
-      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><div style="width:64px;height:64px;background:linear-gradient(135deg,#0284C7,#0369A1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-family:var(--serif);font-size:22px;font-weight:600">SW</div><div><div style="font-weight:700;font-size:16px">dr. Sari Wulandari</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Dokter Umum &middot; Kepala Klinik</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">STR: 3452/UM/2023</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Sen-Sab &middot; 08:00 &ndash; 14:00</div><div><strong>Spesialisasi:</strong> Umum, KIA, kegawatdaruratan</div></div></div>
-      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><div style="width:64px;height:64px;background:linear-gradient(135deg,#0284C7,#0369A1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-family:var(--serif);font-size:22px;font-weight:600">BR</div><div><div style="font-weight:700;font-size:16px">dr. Budi Rahmadi</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Dokter Umum</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">STR: 5578/UM/2024</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Sen-Jum &middot; 14:00 &ndash; 20:00</div><div><strong>Spesialisasi:</strong> Umum, imunisasi dewasa</div></div></div>
-      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><div style="width:64px;height:64px;background:linear-gradient(135deg,#0284C7,#0369A1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-family:var(--serif);font-size:22px;font-weight:600">RK</div><div><div style="font-weight:700;font-size:16px">drg. Rina Kartika</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Dokter Gigi</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">STR: 2298/DG/2022</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Sel, Kam, Sab &middot; 09:00 &ndash; 17:00</div><div><strong>Spesialisasi:</strong> Konservasi gigi, ortodontik</div></div></div>
-      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><div style="width:64px;height:64px;background:linear-gradient(135deg,#0284C7,#0369A1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-family:var(--serif);font-size:22px;font-weight:600">SR</div><div><div style="font-weight:700;font-size:16px">Siti Rahayu, Amd. Keb</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Bidan &middot; KIA &amp; KB</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">SIB: BID/1122/2023</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Sen-Sab &middot; 08:00 &ndash; 14:00</div><div><strong>Spesialisasi:</strong> Persalinan normal, KB, imunisasi bayi</div></div></div>
-      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><div style="width:64px;height:64px;background:linear-gradient(135deg,#0284C7,#0369A1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-family:var(--serif);font-size:22px;font-weight:600">AP</div><div><div style="font-weight:700;font-size:16px">Ahmad Prasetya, Amd. Kep</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Perawat Senior</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">STRK: 8842/KEP/2024</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Rotasi 3 shift</div><div><strong>Spesialisasi:</strong> Tindakan medis, wound care</div></div></div>
-      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><div style="width:64px;height:64px;background:linear-gradient(135deg,#0284C7,#0369A1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-family:var(--serif);font-size:22px;font-weight:600">DS</div><div><div style="font-weight:700;font-size:16px">Dewi Sartika, Amd. AK</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Analis Laboratorium</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">STR: 3391/AK/2023</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Sen-Sab &middot; 08:00 &ndash; 16:00</div><div><strong>Spesialisasi:</strong> Hematologi, kimia klinik, mikroskopis</div></div></div>
+      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><img src="img/img-07.webp" alt="Potret dr. Sari Wulandari" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0"><div><div style="font-weight:700;font-size:16px">dr. Sari Wulandari</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Dokter Umum &middot; Kepala Klinik</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">STR: 3452/UM/2023</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Sen-Sab &middot; 08:00 &ndash; 14:00</div><div><strong>Spesialisasi:</strong> Umum, KIA, kegawatdaruratan</div></div></div>
+      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><img src="img/img-08.webp" alt="Potret dr. Budi Rahmadi" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0"><div><div style="font-weight:700;font-size:16px">dr. Budi Rahmadi</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Dokter Umum</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">STR: 5578/UM/2024</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Sen-Jum &middot; 14:00 &ndash; 20:00</div><div><strong>Spesialisasi:</strong> Umum, imunisasi dewasa</div></div></div>
+      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><img src="img/img-09.webp" alt="Potret drg. Rina Kartika" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0"><div><div style="font-weight:700;font-size:16px">drg. Rina Kartika</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Dokter Gigi</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">STR: 2298/DG/2022</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Sel, Kam, Sab &middot; 09:00 &ndash; 17:00</div><div><strong>Spesialisasi:</strong> Konservasi gigi, ortodontik</div></div></div>
+      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><img src="img/img-10.webp" alt="Potret Bidan Siti Rahayu" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0"><div><div style="font-weight:700;font-size:16px">Siti Rahayu, Amd. Keb</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Bidan &middot; KIA &amp; KB</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">SIB: BID/1122/2023</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Sen-Sab &middot; 08:00 &ndash; 14:00</div><div><strong>Spesialisasi:</strong> Persalinan normal, KB, imunisasi bayi</div></div></div>
+      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><img src="img/img-11.webp" alt="Potret Perawat Ahmad Prasetya" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0"><div><div style="font-weight:700;font-size:16px">Ahmad Prasetya, Amd. Kep</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Perawat Senior</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">STRK: 8842/KEP/2024</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Rotasi 3 shift</div><div><strong>Spesialisasi:</strong> Tindakan medis, wound care</div></div></div>
+      <div class="card"><div style="display:flex;gap:16px;margin-bottom:16px"><img src="img/img-12.webp" alt="Potret Analis Laboratorium Dewi Sartika" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0"><div><div style="font-weight:700;font-size:16px">Dewi Sartika, Amd. AK</div><div style="font-size:12.5px;color:var(--tx-muted);margin-top:2px">Analis Laboratorium</div><div style="font-size:12px;color:#0284C7;margin-top:4px;font-weight:600">STR: 3391/AK/2023</div></div></div><div style="padding-top:14px;border-top:1px solid var(--hairline);font-size:12.5px;color:var(--tx-muted)"><div style="margin-bottom:4px"><strong>Jadwal:</strong> Sen-Sab &middot; 08:00 &ndash; 16:00</div><div><strong>Spesialisasi:</strong> Hematologi, kimia klinik, mikroskopis</div></div></div>
     </div>
   </div>
 </section>
@@ -1038,8 +1041,9 @@ tbody tr:hover{background:#FAFAF9}
 <!-- ========================================== -->
 <div id="s4" class="scr">
 
-<section style="padding:60px 40px;background:linear-gradient(180deg,#FFFBEB 0%,white 100%)">
-  <div style="max-width:1200px;margin:0 auto">
+<section style="padding:60px 40px;background:linear-gradient(180deg,#FFFBEB 0%,white 100%);position:relative;overflow:hidden">
+  <img src="img/img-13.webp" alt="Gunung Merapi dan jalur evakuasi PMI dari desa di Klaten" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3;z-index:0">
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:1">
     <div style="display:flex;gap:8px;font-size:12px;color:var(--tx-soft);margin-bottom:16px">
       <a href="#" onclick="show('s1');return false" style="color:var(--tx-muted)">Beranda</a>
       <span>&rsaquo;</span><span>Kesiapsiagaan</span>
@@ -1200,8 +1204,9 @@ tbody tr:hover{background:#FAFAF9}
 <!-- ========================================== -->
 <div id="s5" class="scr">
 
-<section style="padding:60px 40px;background:linear-gradient(180deg,#F0FDF4 0%,white 100%)">
-  <div style="max-width:1200px;margin:0 auto">
+<section style="padding:60px 40px;background:linear-gradient(180deg,#F0FDF4 0%,white 100%);position:relative;overflow:hidden">
+  <img src="img/img-14.webp" alt="Barisan relawan muda PMR di halaman sekolah Klaten" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.25;z-index:0">
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:1">
     <div style="display:flex;gap:8px;font-size:12px;color:var(--tx-soft);margin-bottom:16px">
       <a href="#" onclick="show('s1');return false" style="color:var(--tx-muted)">Beranda</a>
       <span>&rsaquo;</span><span>Portal Relawan</span>
@@ -1219,7 +1224,7 @@ tbody tr:hover{background:#FAFAF9}
       <div>
         <div class="card">
           <div style="text-align:center;margin-bottom:20px">
-            <div style="width:80px;height:80px;background:linear-gradient(135deg,#15803D,#166534);border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;color:white;font-family:var(--serif);font-size:28px;font-weight:600">RM</div>
+            <img src="img/img-15.webp" alt="Potret Reza Maulana, anggota PMR Wira" style="width:80px;height:80px;border-radius:50%;margin:0 auto 12px;display:block;object-fit:cover">
             <div style="font-weight:700;font-size:16px">Reza Maulana</div>
             <div style="font-size:12px;color:var(--tx-muted)">PMR Wira &middot; SMA N 1 Klaten</div>
             <div style="margin-top:8px"><span class="badge" style="background:#DCFCE7;color:#15803D">&#127775; Kecakapan Madya</span></div>
@@ -1358,6 +1363,8 @@ tbody tr:hover{background:#FAFAF9}
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
       <div class="card news-card" style="padding:0;overflow:hidden">
         <div style="height:180px;background:linear-gradient(135deg,#DC2626,#991B1B);position:relative">
+          <img src="img/img-16.webp" alt="Relawan PMI menyerahkan bantuan makanan kepada pengungsi banjir" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.5) 100%)"></div>
           <div style="position:absolute;top:12px;left:12px"><span class="badge" style="background:rgba(255,255,255,.2);color:white;backdrop-filter:blur(8px)">&#128293; MENDESAK</span></div>
           <div style="position:absolute;bottom:12px;right:12px;color:white;font-family:var(--serif);font-size:32px;font-weight:600">&#128075;</div>
         </div>
@@ -1375,6 +1382,8 @@ tbody tr:hover{background:#FAFAF9}
 
       <div class="card news-card" style="padding:0;overflow:hidden">
         <div style="height:180px;background:linear-gradient(135deg,#F59E0B,#B45309);position:relative">
+          <img src="img/img-17.webp" alt="Tim logistik PMI menyiapkan bantuan siaga Merapi" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.5) 100%)"></div>
           <div style="position:absolute;top:12px;left:12px"><span class="badge" style="background:rgba(255,255,255,.2);color:white;backdrop-filter:blur(8px)">SIAGA MERAPI</span></div>
         </div>
         <div style="padding:20px">
@@ -1391,6 +1400,8 @@ tbody tr:hover{background:#FAFAF9}
 
       <div class="card news-card" style="padding:0;overflow:hidden">
         <div style="height:180px;background:linear-gradient(135deg,#15803D,#166534);position:relative">
+          <img src="img/img-18.webp" alt="Pelajar PMR belajar bersama untuk meraih beasiswa" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.5) 100%)"></div>
           <div style="position:absolute;top:12px;left:12px"><span class="badge" style="background:rgba(255,255,255,.2);color:white;backdrop-filter:blur(8px)">PENDIDIKAN</span></div>
         </div>
         <div style="padding:20px">
@@ -1439,7 +1450,7 @@ tbody tr:hover{background:#FAFAF9}
 
 <section style="padding:40px 40px 20px;background:linear-gradient(180deg,#0F172A 0%,#1E293B 100%);color:white;min-height:calc(100vh - 80px)">
   <div style="max-width:1000px;margin:0 auto">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;gap:24px">
       <div>
         <div style="display:inline-flex;align-items:center;gap:8px;padding:5px 12px;background:rgba(251,191,36,.15);border:1px solid rgba(251,191,36,.3);border-radius:var(--pill);margin-bottom:12px">
           <span style="width:6px;height:6px;background:#22C55E;border-radius:50%;box-shadow:0 0 0 3px rgba(34,197,94,.3)"></span>
@@ -1448,6 +1459,7 @@ tbody tr:hover{background:#FAFAF9}
         <h1 style="font-size:36px;color:white;line-height:1.1">Aldebaran AI</h1>
         <p style="font-size:14px;color:rgba(255,255,255,.6);margin-top:6px">Asisten AI kepalangmerahan &mdash; dilatih dari materi resmi PMI.</p>
       </div>
+      <img src="img/img-19.webp" alt="Visual abstrak kecerdasan buatan untuk misi kemanusiaan" style="width:88px;height:88px;border-radius:18px;object-fit:cover;box-shadow:0 12px 30px rgba(0,0,0,.3);margin-left:auto">
       <div style="display:flex;gap:8px">
         <button style="padding:8px 14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:white;border-radius:8px;font-size:12px;font-weight:500;cursor:pointer">&#128203; Sesi baru</button>
         <button style="padding:8px 14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:white;border-radius:8px;font-size:12px;font-weight:500;cursor:pointer">&#128218; Sumber</button>
@@ -1596,8 +1608,8 @@ tbody tr:hover{background:#FAFAF9}
             <div style="font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:3px;font-weight:700">Admin Panel &middot; PMI Klaten</div>
           </div>
         </div>
-        <div style="margin-top:14px;padding:10px 12px;background:rgba(255,255,255,.04);border-radius:8px;display:flex;align-items:center;gap:10px">
-          <div style="width:28px;height:28px;background:linear-gradient(135deg,#DC2626,#991B1B);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:11px;font-weight:700">AS</div>
+        <div class="admin-user-card" style="margin-top:14px;padding:10px 12px;background:rgba(255,255,255,.04);border-radius:8px;display:flex;align-items:center;gap:10px">
+          <img src="img/img-20.webp" alt="Potret Affandhi Sunandar, administrator ALDEBARAN" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0">
           <div style="flex:1;min-width:0"><div style="font-size:12px;color:white;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Affandhi Sunandar</div><div style="font-size:10px;color:rgba(255,255,255,.5)">Superadmin</div></div>
         </div>
       </div>
@@ -2792,6 +2804,14 @@ function renderAdminSidebar(activeId) {
   document.querySelectorAll('.admin-aside').forEach(function(aside) {
     var nav = aside.querySelector('nav');
     if (!nav) return;
+    var header = aside.firstElementChild;
+    if (header && !header.querySelector('.admin-user-card')) {
+      var userCard = document.createElement('div');
+      userCard.className = 'admin-user-card';
+      userCard.style.cssText = 'margin-top:14px;padding:10px 12px;background:rgba(255,255,255,.04);border-radius:8px;display:flex;align-items:center;gap:10px';
+      userCard.innerHTML = '<img src="img/img-20.webp" alt="Potret Affandhi Sunandar, administrator ALDEBARAN" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0"><div style="flex:1;min-width:0"><div style="font-size:12px;color:white;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Affandhi Sunandar</div><div style="font-size:10px;color:rgba(255,255,255,.5)">Superadmin</div></div>';
+      header.appendChild(userCard);
+    }
     nav.innerHTML =
       '<div style="font-size:9px;letter-spacing:.1em;color:rgba(255,255,255,.3);font-weight:700;padding:6px 10px 8px">MANAJEMEN</div>' +
       ADMIN_NAV.map(function(item) {

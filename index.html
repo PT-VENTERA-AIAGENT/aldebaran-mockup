@@ -7,11 +7,12 @@
 <meta name="description" content="Satu pintu layanan digital PMI Kabupaten Klaten. Website publik, PWA, Android, panel admin RBAC, dan Aldebaran AI on-premise.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink-dark:#0F172A;
-  --ink:#1E293B;
+  /* Ventera paper-white document palette, adapted for PMI red */
+  --ink-dark:#0c1a2a;
+  --ink:#19305c;
   --accent:#DC2626;
   --accent-dark:#991B1B;
   --accent-soft:#FEE2E2;
@@ -19,35 +20,40 @@
   --accent-warm-soft:#FEF3C7;
   --success:#16A34A;
   --success-soft:#DCFCE7;
-  --info:#0EA5E9;
-  --info-soft:#E0F2FE;
-  --canvas:#F5F4F1;
-  --card:#FFFFFF;
-  --hairline:#E7E5E4;
-  --hairline-strong:#D6D3D1;
-  --tx:#0C0A09;
-  --tx-muted:#57534E;
-  --tx-soft:#78716C;
-  --serif:'Playfair Display', Georgia, serif;
-  --sans:'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
-  --mono:'JetBrains Mono', monospace;
+  --info:#2ea1e8;
+  --info-soft:#e3f2fc;
+  --canvas:#f4f7fb;
+  --canvas-deep:#e9eff6;
+  --card:#ffffff;
+  --hairline:#dfe6ee;
+  --hairline-strong:#c6d2de;
+  --tx:#0c1a2a;
+  --tx-muted:#3d4e62;
+  --tx-soft:#64748b;
+  --serif:'Schibsted Grotesk', -apple-system, system-ui, sans-serif;
+  --sans:'Schibsted Grotesk', -apple-system, system-ui, sans-serif;
+  --mono:'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
   --pill:9999px;
   --r6:6px; --r8:8px; --r12:12px; --r16:16px; --r20:20px; --r24:24px;
   --s4:4px; --s6:6px; --s8:8px; --s12:12px; --s16:16px; --s20:20px;
   --s24:24px; --s32:32px; --s40:40px; --s48:48px; --s64:64px; --s80:80px; --s96:96px;
-  --shadow-sm:0 1px 2px rgba(0,0,0,.04);
-  --shadow:0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
-  --shadow-lg:0 10px 30px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.04);
+  --shadow-sm:0 1px 2px rgba(12,26,42,.04);
+  --shadow:0 1px 3px rgba(12,26,42,.06), 0 1px 2px rgba(12,26,42,.04);
+  --shadow-lg:0 10px 30px rgba(12,26,42,.08), 0 4px 12px rgba(12,26,42,.04);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{font-family:var(--sans);color:var(--tx);background:var(--canvas);line-height:1.5;-webkit-font-smoothing:antialiased}
+html,body{font-family:var(--sans);color:var(--tx);background:var(--canvas);line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"ss01"}
 body{padding-bottom:88px}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
 img{max-width:100%;display:block}
 .flex{display:flex}
 .grid{display:grid}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.15}
+h1,h2,h3,h4{font-family:var(--sans);font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--ink-dark)}
+h1{font-weight:800;letter-spacing:-.03em}
+em{font-style:normal;color:var(--accent);font-weight:inherit}
+i{font-style:normal}
+code{font-family:var(--mono);font-size:.9em}
 
 /* NAV — Website */
 .pnav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--hairline);
@@ -100,9 +106,9 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-
 
 /* Utility */
 .hero-blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;pointer-events:none}
-.stat-num{font-family:var(--serif);font-size:38px;font-weight:400;letter-spacing:-.02em;line-height:1}
-.stat-lg{font-family:var(--serif);font-size:52px;font-weight:400;letter-spacing:-.03em;line-height:1}
-.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx-soft);font-weight:700}
+.stat-num{font-family:var(--sans);font-size:38px;font-weight:700;letter-spacing:-.035em;line-height:1;font-feature-settings:"tnum" 1,"ss01" 1}
+.stat-lg{font-family:var(--sans);font-size:52px;font-weight:800;letter-spacing:-.04em;line-height:1;font-feature-settings:"tnum" 1,"ss01" 1}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--tx-soft);font-weight:500}
 .divider{height:1px;background:var(--hairline);border:none;margin:var(--s24) 0}
 
 /* Admin sidebar item */
@@ -113,7 +119,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-
 
 /* Blood type ring */
 .blood-ring{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-family:var(--serif);font-size:22px;font-weight:600;position:relative}
+  font-family:var(--sans);font-size:20px;font-weight:700;letter-spacing:-.02em;position:relative}
 
 /* Tag pill */
 .tag{display:inline-block;padding:3px 10px;background:var(--canvas);border:1px solid var(--hairline);
@@ -1620,7 +1626,7 @@ tbody tr:hover{background:#FAFAF9}
       <div style="background:white;border-bottom:1px solid var(--hairline);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;flex-shrink:0">
         <div>
           <p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Overview</p>
-          <h1 style="font-size:26px;font-weight:400;font-family:var(--serif)">Dashboard</h1>
+          <h1 style="font-size:24px;font-weight:700;letter-spacing:-.02em;font-family:var(--serif)">Dashboard</h1>
         </div>
         <div style="display:flex;gap:10px;align-items:center">
           <div style="padding:7px 14px;background:var(--canvas);border-radius:8px;font-size:12px;color:var(--tx-muted);display:flex;align-items:center;gap:6px">
@@ -1801,7 +1807,7 @@ tbody tr:hover{background:#FAFAF9}
     </aside>
     <main style="flex:1;padding:0;min-width:0;overflow-y:auto;display:flex;flex-direction:column">
       <div style="background:white;border-bottom:1px solid var(--hairline);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;flex-shrink:0">
-        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Website Publik</p><h1 style="font-size:26px;font-weight:400;font-family:var(--serif)">Manajemen Konten</h1></div>
+        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Website Publik</p><h1 style="font-size:24px;font-weight:700;letter-spacing:-.02em;font-family:var(--serif)">Manajemen Konten</h1></div>
         <div style="display:flex;gap:10px;align-items:center">
           <input type="text" placeholder="Cari konten..." style="padding:8px 14px 8px 34px;border:1px solid var(--hairline-strong);border-radius:8px;font-size:13px;background:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2214%22 height=%2214%22 fill=%22none%22 stroke=%22%2378716C%22 stroke-width=%222%22 viewBox=%220 0 24 24%22><circle cx=%2211%22 cy=%2211%22 r=%228%22/><path d=%22M21 21l-4-4%22/></svg>') no-repeat 12px center;width:240px">
           <button class="btn btn-outline btn-sm">&#128190; Draft (14)</button>
@@ -1927,7 +1933,7 @@ tbody tr:hover{background:#FAFAF9}
     </aside>
     <main style="flex:1;padding:0;min-width:0;overflow-y:auto;display:flex;flex-direction:column">
       <div style="background:white;border-bottom:1px solid var(--hairline);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;flex-shrink:0">
-        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Sistem &amp; Keamanan</p><h1 style="font-size:26px;font-weight:400;font-family:var(--serif)">RBAC &amp; Manajemen Pengguna</h1></div>
+        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Sistem &amp; Keamanan</p><h1 style="font-size:24px;font-weight:700;letter-spacing:-.02em;font-family:var(--serif)">RBAC &amp; Manajemen Pengguna</h1></div>
         <div style="display:flex;gap:10px;align-items:center">
           <button class="btn btn-outline btn-sm">&#128274; Audit Log</button>
           <button class="btn btn-outline btn-sm">Import CSV</button>
@@ -2051,7 +2057,7 @@ tbody tr:hover{background:#FAFAF9}
     </aside>
     <main style="flex:1;padding:0;min-width:0;overflow-y:auto;display:flex;flex-direction:column">
       <div style="background:white;border-bottom:1px solid var(--hairline);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;flex-shrink:0">
-        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">UDD &middot; Donor Darah</p><h1 style="font-size:26px;font-weight:400;font-family:var(--serif)">Manajemen Donor</h1></div>
+        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">UDD &middot; Donor Darah</p><h1 style="font-size:24px;font-weight:700;letter-spacing:-.02em;font-family:var(--serif)">Manajemen Donor</h1></div>
         <div style="display:flex;gap:10px;align-items:center">
           <span class="badge badge-green badge-live">Sync UDD berhasil 2 menit lalu</span>
           <button class="btn btn-outline btn-sm">Sync Manual</button>
@@ -2147,7 +2153,7 @@ tbody tr:hover{background:#FAFAF9}
     </aside>
     <main style="flex:1;padding:0;min-width:0;overflow-y:auto;display:flex;flex-direction:column">
       <div style="background:white;border-bottom:1px solid var(--hairline);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;flex-shrink:0">
-        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Portal Relawan</p><h1 style="font-size:26px;font-weight:400;font-family:var(--serif)">Anggota, PMR &amp; Sertifikasi</h1></div>
+        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Portal Relawan</p><h1 style="font-size:24px;font-weight:700;letter-spacing:-.02em;font-family:var(--serif)">Anggota, PMR &amp; Sertifikasi</h1></div>
         <div style="display:flex;gap:10px;align-items:center">
           <button class="btn btn-outline btn-sm">Export KTA (PDF)</button>
           <button class="btn btn-outline btn-sm">Import Anggota</button>
@@ -2261,7 +2267,7 @@ tbody tr:hover{background:#FAFAF9}
     </aside>
     <main style="flex:1;padding:0;min-width:0;overflow-y:auto;display:flex;flex-direction:column">
       <div style="background:white;border-bottom:1px solid var(--hairline);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;flex-shrink:0">
-        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Diklat &amp; Kecakapan</p><h1 style="font-size:26px;font-weight:400;font-family:var(--serif)">Pelatihan &amp; Pembelajaran</h1></div>
+        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Diklat &amp; Kecakapan</p><h1 style="font-size:24px;font-weight:700;letter-spacing:-.02em;font-family:var(--serif)">Pelatihan &amp; Pembelajaran</h1></div>
         <div style="display:flex;gap:10px;align-items:center">
           <button class="btn btn-outline btn-sm">Bank Soal</button>
           <button class="btn btn-outline btn-sm">Kalender Ujian</button>
@@ -2366,7 +2372,7 @@ tbody tr:hover{background:#FAFAF9}
     </aside>
     <main style="flex:1;padding:0;min-width:0;overflow-y:auto;display:flex;flex-direction:column">
       <div style="background:white;border-bottom:1px solid var(--hairline);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;flex-shrink:0">
-        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Posko &amp; Emergensi</p><h1 style="font-size:26px;font-weight:400;font-family:var(--serif)">Posko &amp; Laporan Kejadian</h1></div>
+        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Posko &amp; Emergensi</p><h1 style="font-size:24px;font-weight:700;letter-spacing:-.02em;font-family:var(--serif)">Posko &amp; Laporan Kejadian</h1></div>
         <div style="display:flex;gap:10px;align-items:center">
           <span class="badge badge-red badge-live">3 posko aktif</span>
           <button class="btn btn-outline btn-sm">Kirim Peringatan Massal</button>
@@ -2478,7 +2484,7 @@ tbody tr:hover{background:#FAFAF9}
         <div>
           <p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Kecerdasan Buatan</p>
           <div style="display:flex;align-items:center;gap:10px">
-            <h1 style="font-size:26px;font-weight:400;font-family:var(--serif)">Aldebaran AI Console</h1>
+            <h1 style="font-size:24px;font-weight:700;letter-spacing:-.02em;font-family:var(--serif)">Aldebaran AI Console</h1>
             <span style="font-size:9px;background:var(--ink-dark);color:#FCD34D;padding:3px 8px;border-radius:4px;font-weight:700;letter-spacing:.05em">LLM &middot; ON-PREMISE</span>
           </div>
         </div>
@@ -2677,7 +2683,7 @@ tbody tr:hover{background:#FAFAF9}
     </aside>
     <main style="flex:1;padding:0;min-width:0;overflow-y:auto;display:flex;flex-direction:column">
       <div style="background:white;border-bottom:1px solid var(--hairline);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;flex-shrink:0">
-        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Analitik &amp; Keamanan</p><h1 style="font-size:26px;font-weight:400;font-family:var(--serif)">Statistik &amp; Audit Log</h1></div>
+        <div><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-soft);font-weight:600;margin-bottom:4px">Analitik &amp; Keamanan</p><h1 style="font-size:24px;font-weight:700;letter-spacing:-.02em;font-family:var(--serif)">Statistik &amp; Audit Log</h1></div>
         <div style="display:flex;gap:10px;align-items:center">
           <select style="padding:7px 12px;border:1px solid var(--hairline-strong);border-radius:8px;font-size:12.5px;background:white"><option>30 hari terakhir</option><option>90 hari</option><option>1 tahun</option></select>
           <button class="btn btn-outline btn-sm">Export Excel</button>
